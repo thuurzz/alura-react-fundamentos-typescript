@@ -1,4 +1,4 @@
-import '../Lista.scss';
+import './Item.scss';
 import React from 'react';
 import { ITarefa } from '../../../types/tarefas';
 
@@ -7,7 +7,6 @@ interface Props extends ITarefa{
 }
 
 export default function Item({ tarefa, tempo, selecionado, completado, id , selecionaTarefa }: Props) {
-    console.log("Item atual: ", {tarefa, tempo, selecionado, completado, id })
     return(
         <li className={`${"item"} ${selecionado ? "itemSelecionado" : ""}`} onClick={() => selecionaTarefa({
             tarefa, tempo, selecionado, completado, id

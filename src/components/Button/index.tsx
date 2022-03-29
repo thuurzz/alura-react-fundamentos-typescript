@@ -2,13 +2,13 @@ import React from "react";
 import './Botao.scss';
 
 class Botao extends React.Component<{
-    type?: "button" | "submit" | "reset" | undefined
+    type?: "button" | "submit" | "reset" | undefined,
+    onClick? : () => void;
 }> {
-
     render() {
-        const { type = "button"} = this.props;
+        const { type = "button", onClick } = this.props;
         return(
-            <button type={type} className="botao">
+            <button onClick={onClick} type={type} className="botao">
                 {this.props.children}
             </button>
         )

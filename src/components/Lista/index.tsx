@@ -10,7 +10,7 @@ interface Props {
 function Lista({ tarefas, selecionaTarefa }: Props) {
     return(
         <aside className="listaTarefas">
-        <h2>Estudos do dia
+        <h2>Tarefas
         </h2>
             <ul>
                 {tarefas.map((item) => ( 
